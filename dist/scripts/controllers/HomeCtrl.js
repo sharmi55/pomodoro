@@ -14,6 +14,12 @@
 
   // Later refactor to toggle between pause and play + extra button to reset?
 
+  // Pause button logic
+    this.pause = function() {
+      $interval.cancel(interval);
+      this.interval = null;
+    };
+
   //Reset button logic
     this.reset = function() {
       $interval.cancel(interval);
@@ -24,7 +30,7 @@
     function countdown() {
       this.count--;
     };
-};
+  };
 
   angular
     .module('pomodoro')
