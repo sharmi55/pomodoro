@@ -1,5 +1,5 @@
 (function() {
-  function HomeCtrl() {
+  function HomeCtrl($scope) {
 
   }
 
