@@ -5,5 +5,5 @@
 
   angular
     .module('pomodoro')
-    .controller('HomeCtrl', HomeCtrl);
+    .controller('HomeCtrl', ['$scope', HomeCtrl]);
 })();
