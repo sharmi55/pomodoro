@@ -1,1 +1,10 @@
-<h1>Home Page</h1>
+<div class="container">
+
+  <div class="time-bar col-md-6">
+    <div class="time" id="output">{{home.count | timecode}}</div>
+    <button class="btn btn-primary" type="button"  ng-click="home.start()">Start</button>
+    <button class="btn btn-primary" type="button"  ng-click="home.pause()">Pause</button>
+    <button class="btn btn-primary" type="button"  ng-click="home.reset()">Reset</button>
+  <div>
+
+</div>

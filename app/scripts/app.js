@@ -1,4 +1,20 @@
 (function() {
+  function config($stateProvider, $locationProvider) {
+      $locationProvider
+          .html5Mode({
+              enabled: true,
+              requireBase: false
+          });
 
-})
-angular.module('pomodoro', ['firebase']);
+      $stateProvider
+          .state('home', {
+              url: '/',
+              controller: 'HomeCtrl as home',
+              templateUrl: '/templates/home.html'
+          });
+  }
+
+angular
+  .module('pomodoro',['ui.router', 'firebase'])
+  .config(config);
+})();
