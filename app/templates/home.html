@@ -1,17 +1,10 @@
-
 <div class="container">
-  <div>
-    <h1>Pomodoro</h1>
-  </div>
 
   <div class="time-bar col-md-6">
-    <div class="time">25:00</div>
+    <div class="time" id="output">{{home.count | timecode}}</div>
+    <button class="btn btn-primary" type="button"  ng-click="home.start()">Start</button>
+    <button class="btn btn-primary" type="button"  ng-click="home.pause()">Pause</button>
+    <button class="btn btn-primary" type="button"  ng-click="home.reset()">Reset</button>
   <div>
-
-  <div id="controls">
-    <button class="btn btn-primary" type="button" style="width: 150px" ng-click="start">Start</button>
-    <button class="btn btn-primary" type="button" style="width: 150px" ng-click="pause">Pause</button>
-    <button class="btn btn-primary" type="button" style="width: 150px" ng-click="reset">Reset</button>
-  </div>
 
 </div>
