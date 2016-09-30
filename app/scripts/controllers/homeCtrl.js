@@ -28,9 +28,14 @@
     };
 
     function countdown() {
-      this.count--;
-    };
-  };
+      if(this.count > 0){
+        this.count--;
+      } else {
+        $interval.cancel(interval);
+      }
+    }
+
+  }
 
   angular
     .module('pomodoro')

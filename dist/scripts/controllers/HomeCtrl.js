@@ -1,7 +1,7 @@
 (function() {
   function HomeCtrl($interval) {
 // Total time in seconds (25 min)
-    this.count = 1500;
+    this.count = 3;
 
     var interval = null;
 
@@ -28,9 +28,14 @@
     };
 
     function countdown() {
-      this.count--;
-    };
-  };
+      if(this.count > 0){
+        this.count--;
+      } else {
+        $interval.cancel(interval);
+      }
+    }
+
+  }
 
   angular
     .module('pomodoro')
